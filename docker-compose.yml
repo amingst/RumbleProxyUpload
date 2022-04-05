@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  web:
+    build: .
+    command: npm run start
+    volumes:
+      - '/src'
+      - '/src/node_modules'
+    ports:
+      - '8000:5000'
+  hitch:
+    image: 'hitch:latest'
+    ports:
+      - '443:443'
+    environment:
+      - RUMBLE_TOKEN: token
