@@ -4,12 +4,9 @@ services:
     build: .
     command: npm run start
     volumes:
-      - '/src'
-      - '/src/node_modules'
+      - .:usr/src/service
     ports:
       - '8000:5000'
-    environment:
-      - RUMBLE_TOKEN: token
   hitch:
     image: 'hitch:latest'
     ports:
