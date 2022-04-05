@@ -5,17 +5,15 @@ const http2Express = require('http2-express-bridge')
 const { readFileSync } = require('fs')
 
 const app = http2Express(express)
-const port = process.env.PORT || 8000
-
-app.use(express.static(path.join(__dirname, 'public')))
+const port = process.env.PORT || 4000
 
 app.get('/', (req, res) => {
-	res.sendFile('index.html')
+	res.json({ msg: 'sup' })
 })
 
 const options = {
-	key: readFileSync('KEY'),
-	cert: readFileSync('CERT'),
+	key: readFileSync('key.pem'),
+	cert: readFileSync('cert.pem'),
 	allowHTTP1: true,
 }
 

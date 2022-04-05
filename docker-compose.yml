@@ -7,6 +7,13 @@ services:
       - '/usr/src/services'
     ports:
       - '5000:8000'
+  proxy:
+    build: '/server'
+    command: npm run start
+    volumes:
+      - '/usr/src/services'
+    ports:
+      - '3000:4000'
   hitch:
     image: 'hitch:latest'
     ports:
