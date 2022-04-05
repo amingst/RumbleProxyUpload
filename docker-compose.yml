@@ -1,17 +1,17 @@
 version: '3.9'
 services:
   web:
-    build: '/src'
+    build: '/web'
     command: npm run start
     volumes:
-      - '/usr/src/services'
+      - '/usr/web/services'
     ports:
       - '5000:8000'
-  proxy:
+  server:
     build: '/server'
     command: npm run start
     volumes:
-      - '/usr/src/services'
+      - '/usr/web/services'
     ports:
       - '3000:4000'
   hitch:

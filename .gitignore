@@ -1,5 +1,5 @@
-src/node_modules
-src/package-lock.json
+web/node_modules
+web/package-lock.json
 server/node_modules
 server/package-lock.json
 server/cert.pem

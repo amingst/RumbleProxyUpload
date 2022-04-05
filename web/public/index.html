@@ -4,16 +4,22 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
 		<title>Rumble Uploader</title>
 	</head>
 	<body>
 		<div>
 			<form id="uploader_form" method="POST">
-				<input type="file" name="video" placeholder="video" />
 				<input type="text" name="title" placeholder="title" />
+				<br />
 				<input type="text" name="access_token" placeholder="access_token" />
+				<br />
 				<input type="text" name="description" placeholder="description" />
+				<br />
 				<input type="text" name="license_type" placeholder="license_type" />
+				<br />
+				<input type="file" name="video" placeholder="video" />
+				<br />
 				<input type="submit" />
 			</form>
 		</div>
