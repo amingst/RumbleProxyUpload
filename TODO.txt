@@ -1,0 +1,4 @@
+TODO:
+- Add proxy to server
+- connect to hitch
+- get rumble request
