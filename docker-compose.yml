@@ -8,9 +8,9 @@ services:
       - '/src/node_modules'
     ports:
       - '8000:5000'
+    environment:
+      - RUMBLE_TOKEN: token
   hitch:
     image: 'hitch:latest'
     ports:
       - '443:443'
-    environment:
-      - RUMBLE_TOKEN: token
