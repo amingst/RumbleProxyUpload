@@ -2,3 +2,7 @@ TODO:
 - Add proxy to server
 - connect to hitch
 - get rumble request
+
+IDEA:
+- write the server as an exe in go and run when the request is made
+then send over to the server only when the service is running

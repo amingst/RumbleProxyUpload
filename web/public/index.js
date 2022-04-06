@@ -5,8 +5,22 @@ form.addEventListener('submit', (e) => {
 	const data = new FormData(form)
 	var newHeaders = new Headers()
 
-	// TODO: add .then and .catch for response and embeds
-	fetch('https://rumble.com/api/simple-upload.php', {
+	// TODO: make request to secure backend then to rumble
+
+	/*fetch('https://rumble.com/api/simple-upload.php', {
+		method: 'POST',
+		body: data,
+		mode: 'no-cors',
+		headers: newHeaders,
+	}).then((res) => {
+		console.log(res)
+		res.text().then((data) => {
+			console.log('data: ' + data)
+		})
+	})*/
+
+	// NOTE: URL Hardcoded!!!!
+	fetch('https://localhost:4000/upload', {
 		method: 'POST',
 		body: data,
 		mode: 'no-cors',

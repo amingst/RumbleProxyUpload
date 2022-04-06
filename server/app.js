@@ -7,8 +7,10 @@ const { readFileSync } = require('fs')
 const app = http2Express(express)
 const port = process.env.PORT || 4000
 
-app.get('/', (req, res) => {
-	res.json({ msg: 'sup' })
+app.use()
+
+app.post('/', (req, res) => {
+	console.log(req.body)
 })
 
 const options = {
