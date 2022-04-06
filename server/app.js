@@ -7,8 +7,6 @@ const { readFileSync } = require('fs')
 const app = http2Express(express)
 const port = process.env.PORT || 4000
 
-app.use()
-
 app.post('/', (req, res) => {
 	console.log(req.body)
 })
@@ -21,4 +19,4 @@ const options = {
 
 const server = http2.createSecureServer(options, app)
 //app.listen(port, () => console.log(`Server listening on port ${port}`))
-server.listen(port)
+server.listen(port, () => console.log(`Server listening on port ${port}`))

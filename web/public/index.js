@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
 	})*/
 
 	// NOTE: URL Hardcoded!!!!
-	fetch('https://localhost:4000/upload', {
+	fetch('https://localhost:5000/', {
 		method: 'POST',
 		body: data,
 		mode: 'no-cors',
